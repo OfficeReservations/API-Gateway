@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package cabinet_booking;
+
+option csharp_namespace = "CabinetBooking";
+
+
+enum CabinetType {
+  LECTURE_HALL = 0;
+  LAB_ROOM = 1;
+  PRACTICAL_CLASSROOM = 2;
+}
+
+message Cabinet {
+  // Номер кабинета
+  string number = 1;
+  // Является ли кабинет техническим
+  bool is_technical = 2;
+  // Есть ли в кабинете проектор
+  bool is_projector = 3;
+  // Тип кабинета
+  CabinetType cabinet_type = 4;
+}

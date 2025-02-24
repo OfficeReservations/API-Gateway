@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package cabinet_booking;
+
+import "Protos/models.proto";
+
+option csharp_namespace = "CabinetBooking";
+
+service CabinetBookingService {
+  rpc AddCabinet (AddCabinetRequest) returns (AddCabinetResponse);
+}
+
+
+message AddCabinetRequest{
+    Cabinet cabinet = 1;
+    }
+
+
+message AddCabinetResponse {
+  string number = 1;
+}
